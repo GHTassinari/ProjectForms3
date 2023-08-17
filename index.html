@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Links redirecting to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Create your event</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Poppins (400[Regular]) and Poppins(400[Regular]) fonts being imported from google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <header>
+        <h1>Evaluate the mentoring</h1>
+
+        <p>It's time to evaluate your mentor. How it was?</p>
+
+        <img
+          src="images/img1.png"
+          alt="A balloon with 5 stars inside of it, meaning metaphorically what rating would you give to the mentor."
+        />
+        <section class="pre-form">
+          <b>Personal Information</b>
+        </section>
+      </header>
+      <!-- All the form structures -->
+      <form id="form">
+        <!-- The form structures and inputs will be placed here, inside the form tag -->
+        <!-- Personal information part of the Hero -->
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <div class="col-2">
+              <div class="input-wrapper">
+                <label for="evaluation-name">Name</label>
+                <input type="text" id="evaluation-name" />
+              </div>
+              <div class="input-wrapper">
+                <label for="evaluation-surname">Surname</label>
+                <input type="text" id="evaluation-surname" />
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="evaluation-email"
+                >E-mail<span>(insert a valid e-mail)</span></label
+              >
+              <input type="email" id="evaluation-email" />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Mentor information part of the Hero -->
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Informations about your mentor</legend>
+            <div class="input-wrapper">
+              <label for="evaluation-select-mentor"
+                >Select who was your mentor</label
+              >
+              <select id="evaluation-select-mentor">
+                <option value="Mason">Mason</option>
+                <option value="Olivia">Olivia</option>
+                <option value="Jackson">Jackson</option>
+              </select>
+              <div class="input-wrapper">
+                <label for="evaluation-info">Extra information</label>
+                <textarea id="evaluation-info"></textarea>
+              </div>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="evaluation-questions" />
+                <label for="evaluation-questions">All my questions were clarified in mentoring</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Your available time part of the Hero -->
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Your next mentorship</legend>
+
+            <div class="next-mentorship">
+              <div class="col-3">
+                <div class="input-wrapper">
+                  <label for="mentorship-day"
+                    >Date<span>(DD/MM/AAAA)</span></label
+                  >
+                  <input type="date" id="mentorship-day" />
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="mentorship-from">From</label>
+                  <input type="time" id="mentorship-from" />
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="mentorship-to">To</label>
+                  <input type="time" id="mentorship-to" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <input type="submit" class="button" value="Save Event" form="form" />
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

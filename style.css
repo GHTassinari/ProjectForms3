@@ -1,0 +1,273 @@
+/* Page Configs */
+* {
+  /* This is used to do a light reset of the css */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+select,
+textarea {
+  /* This is used as a guarantee that the font will work at all those situations */
+  font-family: "Poppins", sans-serif;
+}
+.page {
+  margin: 0 auto;
+}
+body {
+  background: #BFD7E4;
+
+  margin-bottom: 456px;
+}
+/* Header */
+header {
+  width: 100%;
+  background: #293241;
+  padding-top: 107px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-family: "Staatliches";
+  font-weight: 400; /* A font weight of 700 is equivalent to regular */
+  font-size: 36px;
+  color: #fff;
+}
+
+header p {
+  color: #fff;
+  font-size: 20px;
+  font-size: 16px;
+
+  margin-bottom: 30px;
+}
+
+header img {
+  margin-bottom: 32px;
+}
+
+.pre-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 750px;
+  height: 133px;
+  
+
+  background: #f67669;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.pre-form b {
+  color: #fff;
+  font-family: 'Staatliches';
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+}
+
+/* Form (Hero) */
+form {
+  background: #fff;
+
+  
+  overflow: hidden;
+  width: 100%;
+  max-width: 750px;
+
+  padding: 32px 64px 64px 64px;
+  border-radius: 0px 0px 20px 20px;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 32px;
+}
+
+fieldset {
+  border: none;
+}
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldset-wrapper legend {
+  color: #253B51;
+  font-family: "Staatliches";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400; /* 400 Is equivalent to regular */
+  line-height: 34px;
+
+  width: 100%;
+  border-bottom: 1px solid #e6e6f0;
+  margin-bottom: 32px;
+
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 16px;
+}
+
+.col-2 {
+  display: flex;
+  flex-direction: row;
+
+  gap: 22px;
+  align-items: flex-start; /* It ensures that labels are above the divs */
+}
+
+.col-2 > div {
+  width: 50%; /* Each div inside .col-2 will take 50% of the width */
+}
+
+.input-wrapper label {
+  color: #4e4958;
+  font-size: 14px;
+  line-height: 24px;
+
+  margin-bottom: 8px;
+}
+
+.input-wrapper label span {
+  margin-left: 12px;
+
+  color: #C1BCCC;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+
+.input-wrapper input, 
+.input-wrapper textarea,
+.input-wrapper select{
+  border-radius: 8px;
+  border: 1px solid #e6e6f0;
+
+  background: #fafafc;
+
+  height: 56px;
+
+  padding: 0 24px;
+
+  font-size: 16px;
+  line-height: 26px;
+  color: #706d77;
+}
+
+.input-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* Importing the select arrow as a background-img in CSS */
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 24px top 50%; /* 50% means that it will be at the center, and right px means that it will have a distance of 24px at the right */
+
+  margin-bottom: 32px;
+}
+
+.input-wrapper textarea {
+  padding: 0;
+  height: 168px;
+  resize: none; /* The user won't be able to resize the textarea in the form */
+}
+
+.col-3 {
+  display: flex;
+  gap: 20px;
+}
+
+.col-3 > div:nth-child(1) {
+  /* the > means that the first layer of divs after the .col-3 (and only those) will be selected, and the div:nth-child(1) 
+  means that the first child of .col-3, specifically, will be the one selected*/
+  width: 100%;
+}
+
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 16px
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+}
+
+.checkbox-wrapper label::before { /* It's using a pseudo-element to create a style of an element that isn't part of the actual HTML */
+  /* This one is being used to style the pseudo-elemnt that appears before the content of a <label>, within an element that has checkbox-wrapper */
+  /* So, it is being used, in this case, to create custom styling for checkboxes */
+  content: '';
+  border: 1px solid #E6E6F0;
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before { /* When the input is checked, he will go to the .checkbox-wrapper label::before and apply a background */
+
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2029_23)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2029_23'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+} 
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
+}
+
+.date-mentorship aside {
+  margin: 8px 0;
+
+  color: #535971;
+  font-family: "Staatliches";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px; /* 170% */
+}
+
+/* button*/
+
+.button {
+  border: none;
+  height: 51px;
+  margin-top: 64px;
+
+  border-radius: 8px;
+  background: #F67669;
+
+  padding: 15px 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 608px;
+  flex-shrink: 0;
+
+  color: #fff;
+  font-family: "Staatliches";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+}
